@@ -1,131 +1,61 @@
-// variable]
-//camelCase
-// var name = 'Rostyslav'
-// const firstName = 'Rostyslav'
-// // const lastName = 'Kovalchuk'//string
-// // let age = 25//number
+// // 1 Number
+// const num = 42 //integer
+// const float = 42.42 //float
+// const pow = 10e3
+// // console.log(pow)
 
-// const isProgrammer = true//boolean
+// console.log(Number.MAX_SAFE_INTEGER)
+// console.log(Math.pow(2, 53) - 1)
+// console.log('MIN_SAFE_INTEGER', Number.MIN_SAFE_INTEGER)
+// console.log('MAX_VALUE', Number.MAX_VALUE)
+// console.log('MIN_VALUE', Number.MIN_VALUE)
+// console.log('POSITIVE_INFINITY', Number.POSITIVE_INFINITY)
+// console.log('NEGATIVE_INFINITY', Number.NEGATIVE_INFINITY)
+// console.log('NEGATIVE_INFINITY', Number.NEGATIVE_INFINITY)
+// console.log('2/0', 2 / 0)
+// console.log('NaN', Number.NaN)//Not a Number
+// const weird = 2 / undefined
+// console.log(Number.isNaN(weird))
+// console.log(Number.isNaN(42))
+// console.log(Number.isFinite(Infinity))
+// console.log(Number.isFinite(42))
 
+// const stringInt = '40'
+// const stringFloat = '40.42'
+// console.log(stringInt + 2)
+// console.log(Number.parseInt(stringInt) + 2)
+// console.log(Number(stringInt) + 2)
+// console.log(+stringInt + 2)
 
-// console.log(name)
-// console.log(age)
+// console.log(Number.parseFloat(stringFloat) + 2)
+// console.log(+stringFloat + 2)
 
+// console.log(0.4 + 0.2)
+// console.log(+(0.4 + 0.2).toFixed(1))
+// console.log(parseFloat(0.4 + 0.2).toFixed(1))
 
-// console.log(isProgrammer)
+// 2 BigInt
+// console.log(900719925474099199999999)
+// console.log(-900719925474099199999999n)
+// console.log(-900719925474099199999999.205n) //error
 
-//2 Mutation
-// console.log('Name of person: ' + firstName + ', and he is ' + age + ' years age')
+// // console.log(10n - 4) //error
+// console.log(parseInt(10n) - 4)
+// console.log(10n - BigInt(4))
+// console.log(5n/2n)//2n
 
-// const lastName = prompt('Add Your Last Name')
-// alert(firstName + ' ' + lastName)
+// 3 Math
+console.log(Math.E)
+console.log(Math.PI)
 
-// // 3 Operators
-// let currentYear = 2022//can change
-// const birthYear = 1996//cannot change, constant
+console.log(Math.sqrt(36))
+console.log(Math.pow(2, 3))//Степінь
+console.log(Math.abs(-42))//Модуль
+console.log(Math.max(42, 12, 23, 11, 422))
+console.log(Math.min(42, 12, 23, 11, 422))
+console.log(Math.floor(4.9))//Заокруглення в меншу сторону
+console.log(Math.ceil(4.9))//Заокруглення в більшу сторону
+console.log(Math.round(4.9))
+console.log(Math.trunc(4.9))
 
-// const age = currentYear - birthYear
-
-// console.log(age)
-
-// console.log(--currentYear)
-
-// const a = 10
-// const b = 5
-// let c = 32
-// // c = c + a
-// c += a
- 
-// console.log(c)
-
-// // 4 Types of data
-// const isProgrammer = true
-// const name = 'Rostyslav'
-// const age = 25
-// let x
-// null
-// console.log(typeof isProgrammer)
-// console.log(typeof name)
-// console.log(typeof age)
-// console.log(typeof x)
-// console.log(typeof null)
-
-// // 5 Operators priority
-// const fullAge = 26
-// const birthYear = 1993
-// const currentYear = 2020
-
-// const isFullAge = (currentYear - birthYear) >= fullAge
-// console.log(isFullAge)
-
-// 6 Conditional operatorі
-
-// const courseStatus = 'pendingg'
-
-// if (courseStatus === 'ready') {
-//     console.log('Course is ready')
-// } else if (courseStatus === 'pending') {
-//     console.log('Course is pending')
-// } else {
-//     console.log('Course is failed')
-// }
-
-// const num1 = 42//number
-// const num2 = '42'//string
-
-// console.log(num1 === num2)
-// console.log(num1 == num2)
-
-const isReady = true
-
-// if (isReady) {
-//     console.log('Everything is ready')
-// } else {
-//     console.log('Everything is not ready')
-// }
-
-//now the same:
-// //Тернарний вираз
-// isReady? console.log('Everything is ready') : console.log('Everything is not ready')
-
-// 7 Boolean
-//http://www-lia.deis.unibo.it/materiale/JS/developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators.html
-
-// 8 Functions
-
-function calculateAge(year){
-return 2021 - year
-}
-
-// const myAge = calculateAge(1993)
-
-// console.log(myAge)
-
-// console.log(calculateAge(1996))
-
-// function logInfoAbout(name, year) {
-//     const age = calculateAge(year)
-
-//     if (age > 0) {
-//         console.log('Human ' + name + ' has a ' + age + ' years old')
-//     } else {
-//         console.log('It`s future!!!')
-//     }
-// }
-
-// logInfoAbout('Rostyslav', 1996)
-
-// logInfoAbout('Oleg', 2003)
-
-// // 9 Massives
-// const cars = ['Mazda', 'Mercedes', 'Tesla']
-
-// cars[3] = 'Porshe'
-
-// // const cars = new Array('Mazda', 'Mercedes', 'Tesla')
-// console.log(cars)
-// console.log(cars[1])
-// console.log(cars.length)
-
-
-//10 Cycles
+console.log(Math.random(4.9))

@@ -1,61 +1,89 @@
-// // 1 Number
-// const num = 42 //integer
-// const float = 42.42 //float
-// const pow = 10e3
-// // console.log(pow)
+// window.alert('1')
 
-// console.log(Number.MAX_SAFE_INTEGER)
-// console.log(Math.pow(2, 53) - 1)
-// console.log('MIN_SAFE_INTEGER', Number.MIN_SAFE_INTEGER)
-// console.log('MAX_VALUE', Number.MAX_VALUE)
-// console.log('MIN_VALUE', Number.MIN_VALUE)
-// console.log('POSITIVE_INFINITY', Number.POSITIVE_INFINITY)
-// console.log('NEGATIVE_INFINITY', Number.NEGATIVE_INFINITY)
-// console.log('NEGATIVE_INFINITY', Number.NEGATIVE_INFINITY)
-// console.log('2/0', 2 / 0)
-// console.log('NaN', Number.NaN)//Not a Number
-// const weird = 2 / undefined
-// console.log(Number.isNaN(weird))
-// console.log(Number.isNaN(42))
-// console.log(Number.isFinite(Infinity))
-// console.log(Number.isFinite(42))
+// window.confirm('Wthat is your name?')
 
-// const stringInt = '40'
-// const stringFloat = '40.42'
-// console.log(stringInt + 2)
-// console.log(Number.parseInt(stringInt) + 2)
-// console.log(Number(stringInt) + 2)
-// console.log(+stringInt + 2)
+const heading = document.getElementById('hello')
+// const heading2 = document.getElementsByTagName('h2')[0]
+// const heading2 = document.getElementsByClassName('h2-class')[0]
+// const heading2 = document.querySelector('h2')
+// const heading2 = document.querySelector('.h2-class')
+const heading2 = document.querySelector('#sub-hello')
 
-// console.log(Number.parseFloat(stringFloat) + 2)
-// console.log(+stringFloat + 2)
+console.log(heading2)
 
-// console.log(0.4 + 0.2)
-// console.log(+(0.4 + 0.2).toFixed(1))
-// console.log(parseFloat(0.4 + 0.2).toFixed(1))
+// const heading3 = heading2.nextElementSibling
 
-// 2 BigInt
-// console.log(900719925474099199999999)
-// console.log(-900719925474099199999999n)
-// console.log(-900719925474099199999999.205n) //error
+const h2List = document.querySelectorAll('h2')
+console.log(h2List)
+const heading3 = h2List[h2List.length - 1]
+console.log(heading3)
 
-// // console.log(10n - 4) //error
-// console.log(parseInt(10n) - 4)
-// console.log(10n - BigInt(4))
-// console.log(5n/2n)//2n
 
-// 3 Math
-console.log(Math.E)
-console.log(Math.PI)
 
-console.log(Math.sqrt(36))
-console.log(Math.pow(2, 3))//Степінь
-console.log(Math.abs(-42))//Модуль
-console.log(Math.max(42, 12, 23, 11, 422))
-console.log(Math.min(42, 12, 23, 11, 422))
-console.log(Math.floor(4.9))//Заокруглення в меншу сторону
-console.log(Math.ceil(4.9))//Заокруглення в більшу сторону
-console.log(Math.round(4.9))
-console.log(Math.trunc(4.9))
+console.dir(heading.textContent)
 
-console.log(Math.random(4.9))
+setTimeout(() => {
+addStylesTo(heading, 'JavaScript')
+}, 700)
+
+setTimeout(() => {
+addStylesTo(heading2, 'Practice', 'blue')
+}, 1000)
+
+const link = heading3.querySelector('a')
+
+setTimeout(() => {
+addStylesTo(link, 'Done', 'yellow', '2rem')
+}, 1500)
+
+// setTimeout(() => {
+// addStylesTo(heading3.children[0], 'Done', 'yellow', '2rem')
+// }, 4500)
+
+function addStylesTo(node, text, color = 'teal', fontSize) {
+    node.textContent = text
+    node.style.color = color
+    node.style.textAlign = 'center'
+    node.style.backgroundColor = 'black'
+    node.style.padding = '2rem'
+    node.style.display = 'block'
+    node.style.width = '100%'
+    if (fontSize) {
+        node.style.fontSize = fontSize
+    }
+    //Якщо fontSize не false
+    //falsy: '', undefined, null, 0, false//
+}
+
+heading.onclick = () => {
+    console.log('click')
+} 
+
+heading.onclick = () => {
+    if (heading.style.color === 'teal') {
+        heading.style.color = '#000'
+        heading.style.backgroundColor = '#fff'
+    } else {
+        heading.style.color = 'teal'
+        heading.style.backgroundColor = '#000'
+    }
+}
+
+heading2.addEventListener('dblclick', () =>{
+    if (heading2.style.color === 'blue') {
+        heading2.style.color = '#000'
+        heading2.style.backgroundColor = '#fff'
+    } else {
+        heading2.style.color = 'blue'
+        heading2.style.backgroundColor = '#000'
+    }
+})
+
+link.addEventListener('click', () => {
+    event.preventDefault()//Забороняє перехід за посиланням
+    console.log('click on link', event.target.getAttribute('href'))//Шлях як взяти посилання
+    //перебити target_blank (відкрити  в тому самому вікні)
+    const url = event.target.getAttribute('href')
+    
+    window.location = url
+})

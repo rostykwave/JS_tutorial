@@ -33,19 +33,47 @@ function addItemToEnd(){
 // cars[index] = 'Porsche'
 // console.log(cars)
 
+// let findedPerson
+// for (const person of people) {
+//     // console.log(person)
+//     if (person.budget === 13000) {
+//         findedPerson = person
+//     }
+// }
+// console.log(findedPerson)
+// ]
 // const index = people.findIndex(function (person) {
 //     return person.budget === 13000
 // })
 // console.log(people[index])
 
-const person = people.find(function (person) {
-    return person.budget === 13000
-})
-console.log(person)
+// const person = people.find(function (person) {
+//     return person.budget === 13000
+// })
+// console.log(person)
+
+// const person = people.find(person => person.budget === 13000)
+// console.log(person)
+
+// console.log(cars.includes('Mazda'))//Перевірка наявності елемента
+
+// const upperCaseCars = cars.map(car => {
+//     return car.toUpperCase()
+// })
+
+// console.log(upperCaseCars)
+
+// const pow2Fib = fib.map(num => num ** 2)//Піднести до квадрату
+// console.log(pow2Fib)
+
+const pow2 = num => num ** 2
+
+const pow2Fib = fib.map(pow2)//Піднести до квадрату
+console.log(pow2Fib)
 
 //Exercise 1//Перевертання тексту ззаду наперед (робиться через масиви)
 // const text = 'Hi, we are studying JavaScript'
 // const reverseText = text.split('').reverse().join('')
 // console.log(reverseText)
 
-3:25:15
+// 3:33:20

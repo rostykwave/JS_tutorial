@@ -1,89 +1,51 @@
-// window.alert('1')
+const cars = ['Mazda','Ford','BMW','Mercedes']
+const fib = [1, 1, 2, 3, 5, 8, 13]//числа Фібоначі
 
-// window.confirm('Wthat is your name?')
+//Складніший масив (об'єктний)//Замість IndexOf використовувати findIndex
+const people = [
+    {name: 'Vladilen', budget: 4200 },
+    {name: 'Rostyslav', budget: 13000 },
+    {name: 'Katya', budget:5200}
+]
 
-const heading = document.getElementById('hello')
-// const heading2 = document.getElementsByTagName('h2')[0]
-// const heading2 = document.getElementsByClassName('h2-class')[0]
-// const heading2 = document.querySelector('h2')
-// const heading2 = document.querySelector('.h2-class')
-const heading2 = document.querySelector('#sub-hello')
+//Fuction
+function addItemToEnd(){
 
-console.log(heading2)
-
-// const heading3 = heading2.nextElementSibling
-
-const h2List = document.querySelectorAll('h2')
-console.log(h2List)
-const heading3 = h2List[h2List.length - 1]
-console.log(heading3)
-
-
-
-console.dir(heading.textContent)
-
-setTimeout(() => {
-addStylesTo(heading, 'JavaScript')
-}, 700)
-
-setTimeout(() => {
-addStylesTo(heading2, 'Practice', 'blue')
-}, 1000)
-
-const link = heading3.querySelector('a')
-
-setTimeout(() => {
-addStylesTo(link, 'Done', 'yellow', '2rem')
-}, 1500)
-
-// setTimeout(() => {
-// addStylesTo(heading3.children[0], 'Done', 'yellow', '2rem')
-// }, 4500)
-
-function addStylesTo(node, text, color = 'teal', fontSize) {
-    node.textContent = text
-    node.style.color = color
-    node.style.textAlign = 'center'
-    node.style.backgroundColor = 'black'
-    node.style.padding = '2rem'
-    node.style.display = 'block'
-    node.style.width = '100%'
-    if (fontSize) {
-        node.style.fontSize = fontSize
-    }
-    //Якщо fontSize не false
-    //falsy: '', undefined, null, 0, false//
 }
 
-heading.onclick = () => {
-    console.log('click')
-} 
+//Method
 
-heading.onclick = () => {
-    if (heading.style.color === 'teal') {
-        heading.style.color = '#000'
-        heading.style.backgroundColor = '#fff'
-    } else {
-        heading.style.color = 'teal'
-        heading.style.backgroundColor = '#000'
-    }
-}
+// cars.push('Renault') //Добавляння елементу вкінці
 
-heading2.addEventListener('dblclick', () =>{
-    if (heading2.style.color === 'blue') {
-        heading2.style.color = '#000'
-        heading2.style.backgroundColor = '#fff'
-    } else {
-        heading2.style.color = 'blue'
-        heading2.style.backgroundColor = '#000'
-    }
+// cars.unshift('Porshe')//Добавляння елементу на початку
+
+// cars.shift()//Видалення елементу на початку
+// const firstItem = cars.shift()///Вибір видаленого елемнта (першого з масиву)
+// console.log(firstItem)
+
+// const lastCar = cars.pop()///Вибір видаленого елемнта (останнього з масиву)
+// console.log(lastCar)
+// console.log(cars.reverse())
+
+// const index = cars.indexOf('BMW')
+// console.log(cars[index])//Виведення константи в консоль
+
+// cars[index] = 'Porsche'
+// console.log(cars)
+
+// const index = people.findIndex(function (person) {
+//     return person.budget === 13000
+// })
+// console.log(people[index])
+
+const person = people.find(function (person) {
+    return person.budget === 13000
 })
+console.log(person)
 
-link.addEventListener('click', () => {
-    event.preventDefault()//Забороняє перехід за посиланням
-    console.log('click on link', event.target.getAttribute('href'))//Шлях як взяти посилання
-    //перебити target_blank (відкрити  в тому самому вікні)
-    const url = event.target.getAttribute('href')
-    
-    window.location = url
-})
+//Exercise 1//Перевертання тексту ззаду наперед (робиться через масиви)
+// const text = 'Hi, we are studying JavaScript'
+// const reverseText = text.split('').reverse().join('')
+// console.log(reverseText)
+
+3:25:15
